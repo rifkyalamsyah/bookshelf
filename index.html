@@ -13,23 +13,42 @@
     <main>
       <aside>
         <section class="input-section">
-          <h2>Masukan Buku Baru</h2>
+          <h1>Masukan Buku Baru</h1>
           <form id="inputBook">
             <div class="input">
               <label for="inputBookTitle">Judul Buku</label>
-              <input id="inputBookTitle" type="text" required />
+              <input
+                id="inputBookTitle"
+                type="text"
+                placeholder="Masukan Judul Buku"
+                required
+              />
             </div>
             <div class="input">
               <label for="inputBookAuthor">Penulis</label>
-              <input id="inputBookAuthor" type="text" required />
+              <input
+                id="inputBookAuthor"
+                type="text"
+                placeholder="Masukan Nama Penulis"
+                required
+              />
             </div>
             <div class="input">
               <label for="inputBookYear">Tahun</label>
-              <input id="inputBookYear" type="number" required />
+              <input
+                id="inputBookYear"
+                type="number"
+                placeholder="Tahun Buku diterbitkan"
+                required
+              />
             </div>
             <div class="input-inline">
-              <label for="inputBookIsComplete">Selesai Dibaca</label>
-              <input id="inputBookIsComplete" type="checkbox" required />
+              <label for="inputBookIsComplete">Selesai Dibaca?</label>
+              <input
+                id="inputBookIsComplete"
+                type="checkbox"
+                class="checkbox"
+              />
             </div>
             <button id="bookSubmit" type="submit">
               Masukan Buku ke rak <span>Belum selesai dibaca</span>
@@ -40,48 +59,29 @@
 
       <div class="container">
         <section class="search-section">
-          <h2>Cari Buku</h2>
+          <h1>Cari Buku</h1>
           <form id="searchBook">
-            <label for="searchBookTitle">Judul</label>
-            <input id="searchBookTitle" type="text" />
+            <input
+              id="searchBookTitle"
+              type="text"
+              placeholder="Cari judul buku disini"
+            />
             <button id="searchSubmit" type="submit">Cari</button>
           </form>
         </section>
 
         <section class="book-shelf">
-          <h2>Belum Selesai Dibaca</h2>
-          <div id="incompleteBookshelfList" class="book-list">
-            <article class="book-item">
-              <h3>Book title</h3>
-              <p>Penulis: John Shelby</p>
-              <p>Tahun: 2001</p>
-
-              <div class="action">
-                <button class="green">Selesai Dibaca</button>
-                <button class="red">Hapus Buku</button>
-              </div>
-            </article>
-          </div>
+          <h1>Belum Selesai Dibaca</h1>
+          <div id="incompleteBookshelfList" class="book-list"></div>
         </section>
 
         <section class="book-shelf">
-          <h2>Selesai Dibaca</h2>
-          <div id="completeBookshelfList" class="book-list">
-            <article class="book-item">
-              <h3>Book title</h3>
-              <p>Penulis: Thomas Shelby</p>
-              <p>Tahun: 2000</p>
-
-              <div class="action">
-                <button class="green">Selesai Dibaca</button>
-                <button class="red">Hapus Buku</button>
-              </div>
-            </article>
-          </div>
+          <h1>Selesai Dibaca</h1>
+          <div id="completeBookshelfList" class="book-list"></div>
         </section>
       </div>
     </main>
-    <footer>&copy; 2023 - Rifky Alamsyah</footer>
+    <footer>&copy; 2023 Bookhelf - Rifky Alamsyah</footer>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,12 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --primary: #a688fa;
+  --black: #121212;
+  --white: #ffffff;
+  --grey: #908d96;
+  --dark-grey: #2f2b3a;
+  --dark-purple: #25242a;
+  --surface: #1a1625;
+  --surface-card: #2f2b3a;
+  --red: #7f242c;
+  --green: #215938;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-html {
+body {
+  background-color: var(--dark-purple);
+}
+
+body,
+input,
+button {
   font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  color: var(--primary);
+}
+
+input {
+  background-color: var(--dark-grey);
+}
+
+h1 {
+  color: var(--primary);
+}
+
+h2,
+label {
+  color: var(--white);
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+button {
+  padding: 2px 4px;
 }
 
 header {
@@ -17,17 +60,168 @@ header {
 main {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   padding: 0 2rem;
 }
 
+.input-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--dark-grey);
+  background-color: var(--surface);
+}
+
+.input-section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--grey);
+}
+
+.input-section > form > .input > label {
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.input-section > form > .input:nth-child(1) {
+  padding-top: 1rem;
+}
+
+.input-section > form > .input:nth-child(3) {
+  padding-bottom: 1rem;
+}
+
+.input-section > form > .input-inline {
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-section > form > .input-inline > input[type='checkbox'] {
+  line-height: normal;
+  width: 20px;
+  height: 20px;
+}
+
+.input-section > form > button {
+  border: 0;
+  padding: 8px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--black);
+  background-color: var(--primary);
+}
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  width: 30%;
 }
+
+.search-section {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--dark-grey);
+  background-color: var(--surface);
+}
+
+.search-section > form > label {
+  font-weight: 700;
+}
+
+.search-section > form > input {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--grey);
+}
+
+.search-section > form > button {
+  width: 20%;
+  border: 0;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--black);
+  background-color: var(--primary);
+}
+
+.book-shelf {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--dark-grey);
+  background-color: var(--surface);
+}
+
+.book-shelf > .book-list > .book-item {
+  margin: 12px 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  /* border: 1px solid var(--primary); */
+  background-color: var(--surface-card);
+}
+
+.book-shelf > .book-list > .book-item > p {
+  margin: 8px 0;
+  color: var(--grey);
+}
+
+.book-shelf > .book-list > .book-item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-shelf > .book-list > .book-item > .action > .green {
+  background-color: var(--green);
+  color: white;
+}
+
+.book-shelf > .book-list > .book-item > .action > .red {
+  background-color: var(--red);
+  color: white;
+}
+
 
 footer {
   text-align: center;
-  padding-top: 4rem;
+  padding: 4rem 0;
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 992px) {
+  main {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .book-shelf {
+    padding: 1.5rem;
+  }
+
+  .book-shelf > .book-list > .book-item > .action {
+    display: flex;
+  }
 }
