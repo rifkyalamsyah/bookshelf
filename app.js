@@ -11,13 +11,12 @@ function addBook(event) {
     id: +new Date(),
     title: inputBookTitle.value,
     author: inputBookAuthor.value,
-    year: inputBookYear.value,
+    year: Number(inputBookYear.value),
     isComplete: inputBookIsComplete.checked,
   };
-  console.log(newBook);
+  // console.log(newBook);
 
   books.push(newBook);
-  alert('Buku berhasil ditambahkan');
   document.dispatchEvent(new Event('bookChange'));
 }
 
@@ -66,9 +65,9 @@ function deleteBook(event) {
   });
 
   const Confirm = confirm('Apakah Anda yakin ingin menghapus buku ini?');
-  if (bookId !== -1 && Confirm ) {
+  if (bookId !== -1 && Confirm) {
     books.splice(bookId, 1);
-    document.dispatchEvent(new Event('bookChange'));  
+    document.dispatchEvent(new Event('bookChange'));
     renderBooks(books);
   }
 }
