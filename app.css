@@ -9,8 +9,10 @@
   --dark-purple: #25242a;
   --surface: #1a1625;
   --surface-card: #2f2b3a;
-  --red: #7f242c;
-  --green: #215938;
+  --red-light: #FFF1F3;
+  --red: #AA1E32;
+  --green-light: #DBFDE6;
+  --green: #227755;
 }
 
 * {
@@ -182,13 +184,17 @@ main {
 }
 
 .book-shelf > .book-list > .book-item > .action > .green {
-  background-color: var(--green);
-  color: white;
+  background-color: var(--green-light);
+  color: var(--green);
+  border: 1px solid var(--green);
+  font-size: 12px;
 }
 
 .book-shelf > .book-list > .book-item > .action > .red {
-  background-color: var(--red);
-  color: white;
+  background-color: var(--red-light);
+  color: var(--red);
+  border: 1px solid var(--red);
+  font-size: 12px;
 }
 
 
